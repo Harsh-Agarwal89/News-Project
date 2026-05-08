@@ -37,7 +37,7 @@ const NewsBoard = ({ category }) => {
 
         const apiKey = import.meta.env.VITE_API_KEY
 
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`
+        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`
 
         const response = await fetch(url)
         const data = await response.json()
